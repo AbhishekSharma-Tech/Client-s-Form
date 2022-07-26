@@ -4,7 +4,7 @@ if(isset($_POST['submit']))
 {    
      $topic = $_POST['topic'];
      $words = $_POST['words'];
-     $description = $_POST['description'];
+     $instruction = $_POST['instruction'];
 
 
      $count = 0;
@@ -12,13 +12,13 @@ if(isset($_POST['submit']))
    if ($words > 1000) {
 
       echo '<script type="text/javascript">';
-      echo 'alert("Error!!! No. of Word is > 1000")';
+      echo 'alert("Error!!! Maximum allowed words are 1000 only!")';
       echo '</script>';
 
 
       echo "<body style='background-color: #142d4c;'>
 
-            <h1 style='color: #f95959; font: italic bold 40px Georgia, Serif; text-shadow: -12px 6px 0 #0a0e27; margin-top: 20%; margin-bottom: 20%; '><center>ERROR!!! 'No. of Words should be <= 1000'</center></h1>
+            <h1 style='color: #f95959; font: italic bold 40px Georgia, Serif; text-shadow: -12px 6px 0 #0a0e27; margin-top: 20%; margin-bottom: 20%; '><center>ERROR!!! 'Maximum allowed words are 1000 only!'</center></h1>
 
             </body>";
 
@@ -31,8 +31,12 @@ if(isset($_POST['submit']))
  
       $c = 0;
       for($i=0; $i<7; $i++){
+
+         $dates2 = date_create(date('Y-m-d'));
+         $new_date3 = date_add($dates2, date_interval_create_from_date_string("$i days"));
+         $new_date4 = date_format($new_date3, "Y-m-d");
          
-         $sum = mysqli_fetch_array(mysqli_query($conn,"SELECT SUM(Words) From projects WHERE Delivery_Date = CURDATE() + $i"));
+         $sum = mysqli_fetch_array(mysqli_query($conn,"SELECT SUM(Words) From client_form WHERE Delivery_Date = '$new_date4'"));
 
          if ((1000 - $sum[0]) >= $words){
             break;
@@ -42,8 +46,12 @@ if(isset($_POST['submit']))
          }
       }
 
-      $sql = "INSERT INTO projects (topic, words, descriptions, dates, delivery_date)
-         VALUES ('$topic','$words','$description', CURDATE(), CURDATE() + $c)";
+      $dates = date_create(date('Y-m-d'));
+      $new_date = date_add($dates, date_interval_create_from_date_string("$c days"));
+      $new_date2 = date_format($new_date, "Y-m-d");
+
+      $sql = "INSERT INTO client_form (delivery_date, topic, words, instructions)
+         VALUES ('$new_date2','$topic','$words','$instruction')";
       if (mysqli_query($conn, $sql)) {
          echo "<body style='background-color: #142d4c;'>
 
