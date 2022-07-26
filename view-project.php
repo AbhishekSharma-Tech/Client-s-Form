@@ -30,27 +30,27 @@
                 </div>
                 <?php
                     include_once 'db.php';
-                    $result = mysqli_query($conn,"SELECT * FROM projects");
+                    $result = mysqli_query($conn,"SELECT * FROM client_form ORDER BY Delivery_Date ASC");
                 ?>
                 <?php
                     if (mysqli_num_rows($result) > 0) {
                 ?>
                     <table class='table table-bordered table-striped' style="border: 3px solid white;">
                         <tr style="border: 3px solid white;">
+                            <th style="border: 2px solid white; color: #e3e3e3; text-align: center; font-size: 20px">Scheduled Delivery Date</th>
                             <th style="border: 2px solid white; color: #e3e3e3; text-align: center; font-size: 20px">Topic</th>
                             <th style="border: 2px solid white; color: #e3e3e3; text-align: center; font-size: 20px">Number of Words</th>
                             <th style="border: 2px solid white; color: #e3e3e3; text-align: center; font-size: 20px">Instructions</th>
-                            <th style="border: 2px solid white; color: #e3e3e3; text-align: center; font-size: 20px">Scheduled Delivery Date</th>
                         </tr>
                         <?php
                             $i=0;
                             while($row = mysqli_fetch_array($result)) {
                                 ?>
                                 <tr>
-                                    <td style="border: 2px solid white; color: #e7eaf6; font-size: 15px"><?php echo $row['Topic']; ?></td>
-                                    <td style="border: 2px solid white; color: #e7eaf6; font-size: 15px"><?php echo $row["Words"]; ?></td>
-                                    <td style="border: 2px solid white; color: #e7eaf6; font-size: 15px"><?php echo $row["Descriptions"]; ?></td>
-                                    <td style="border: 2px solid white; color: #e7eaf6; font-size: 15px"><?php echo $row["Delivery_Date"]; ?></td>
+                                    <td style="border: 2px solid white; color: #e7eaf6; text-align: center; font-size: 15px"><?php echo $row["Delivery_Date"]; ?></td>
+                                    <td style="border: 2px solid white; color: #e7eaf6; text-align: center; font-size: 15px"><?php echo $row['Topic']; ?></td>
+                                    <td style="border: 2px solid white; color: #e7eaf6; text-align: center; font-size: 15px"><?php echo $row["Words"]; ?></td>
+                                    <td style="border: 2px solid white; color: #e7eaf6; text-align: center; font-size: 15px"><?php echo $row["Instructions"]; ?></td>
                                 </tr>
                                 <?php
                                     $i++;
