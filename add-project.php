@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     <label>Additional Information *</label>
-                    <textarea name="description" class="form-control" id="" cols="30" rows="10" required></textarea>
+                    <textarea name="instruction" class="form-control" id="" cols="30" rows="10" required></textarea>
                 </div>
 
                 <input type="submit" class="submit-btn btn-grad" name="submit" value="Submit">
