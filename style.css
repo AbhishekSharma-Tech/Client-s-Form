@@ -1,0 +1,143 @@
+body{
+    background: #385170;
+}
+
+.body-color {
+    background: #142d4c !important;
+}
+
+/*---------------------------------------------------index file styling-----------------------------------------------------*/
+.text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+}
+h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+h3{
+    color: aqua;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #142d4c;
+    position: relative;
+    background: #9fd3c7;
+    border: 2px solid #9fd3c7;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.2s ease;
+}
+a:hover{
+    background: none;
+    color: white;
+    box-shadow: 0 0 15px #9fd3c7;
+}
+
+
+/*------------------------------------------------Add page--------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    width: 100%;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    color: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 0 35px #9fd3c7;
+    background: #142d4c;
+    padding: 15px;
+    border-radius: 15px;
+}
+.card h2{
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f95959;
+}
+.input-box{
+    width: 100%;
+    background: none;
+    border: 2px solid #e3e3e3;
+    margin: 6px 0;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #e3e3e3;
+    font-size: 15px;
+}
+textarea{
+    height: 150px;
+    width: 100%;
+    background: none;
+    border: 2px solid #e3e3e3;
+    margin: 6px 0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: #e3e3e3;
+    font-size: 16px;
+}
+.submit-btn{
+    text-decoration: none;
+    font-size: 25px;
+    color: #e3e3e3;
+    position: relative;
+    background: #385170; 
+    border: 2px solid #385170;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.2s ease;
+    width: 150px;
+}
+.submit-btn:hover{
+    background: none;
+    color: black;
+    box-shadow: 0 0 15px #9fd3c7;
+}
+
+    
+ /*-----------------------------View Page--------------------------------------------*/
+
+ .card-view{
+    margin-top: 20px;
+    margin-bottom: 19px;
+    box-shadow: 0 0 35px #9fd3c7;
+    background: #407088;
+    padding: 15px;
+    border-radius: 15px;
+}
+.card-view h2{
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
