@@ -1,7 +1,6 @@
-CREATE TABLE projects {
+CREATE TABLE client_form (
+    Delivery_Date DATE,
     Topic VARCHAR(50),
-    Words SMALLINT(10),
-    Descriptions TEXT(1000),
-    Date DATE(20),
-    Delivery_Date DATE(20)
-}
+    Words SMALLINT,
+    Instructions TEXT
+);
