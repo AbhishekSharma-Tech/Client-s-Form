@@ -11,8 +11,8 @@
 </head>
 <body class="body-color">
   <div class="text">
-    <h2>Welcome Sir</h2>
-    <h3>Hope you doing well...</h3>
+    <h2>Client XYZ</h2>
+    <h3>Welcome to Company Name</h3>
 
     <a href="add-project.php" target="_blank" rel="noopener noreferrer">Add Project</a>
     <a href="view-project.php" target="_blank" rel="noopener noreferrer">View Project</a>
